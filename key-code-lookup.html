@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Look Up Key Codes</title>
+		<style>
+			body {
+				text-align: center;
+				padding: 2em;
+			}
+			h1 {
+				font-size: 8em;
+				line-height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="output">0</h1>
+		<script>
+			window.addEventListener( 'keydown', lookUpKeyCode );
+			function lookUpKeyCode( keyEvent ) {
+				keyEvent.preventDefault();
+				var keyCode = keyEvent.keyCode;
+				document.getElementById( 'output' ).innerHTML = keyCode;
+				console.log( keyEvent );
+			}
+		</script>
+	</body>
+</html>
